@@ -940,12 +940,13 @@ th.sortable .hint {
 
   /* Immagini nelle card */
   .approfondimento-card img {
-   width: 80%;      
+   width: 100%;      
     height: auto;     
-    max-height: 300px; 
+    max-height: 500px; 
     object-fit: cover;
   }
 
 }
+
 
 
