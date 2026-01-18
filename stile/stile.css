@@ -31,7 +31,7 @@ body {
 
 .header-link:hover,
 .header-link:active {
-  color: var(--black);
+  color: var(--white);
 }
 
 /* NAVBAR */
@@ -57,9 +57,12 @@ body {
 }
 
 .drop-link:hover,
-.drop-link:active,
-.drop-link:visited {
-  color: white;
+.drop-link:active {
+  color: black;
+}
+
+.drop-link:visited{
+  color: white
 }
 
 .drop-arrow {
@@ -943,6 +946,7 @@ th.sortable .hint {
   }
 
 }
+
 
 
 
