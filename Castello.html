@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>La letteratura degli impiegati</title>
+   <meta name="author" content="Giorgia Amara">
+  <meta name="title" content="La letteratura degli impiegati">
+  <meta name="subject" content="Letteratura, Impiegati, Sociologia">
+  <meta name="description" content="Sito dedicato alla letteratura che racconta la vita degli impiegati.">
+  <meta name="publisher" content="Giorgia Amara">
+  <meta name="date" content="01-2026">
+  <meta name="language" content="it">
+  <meta name="rights" content="© 2026 Giorgia Amara">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="stile/stile.css">
+</head>
+
+<body id="top">
+
+<header class="site-header">
+  <a href="index.html" class="header-link">
+    <h1>La letteratura degli impiegati</h1>
+  </a>
+</header>
+
+<nav class="navbar-custom">
+ <div class="dropdown">
+  <a href="testi.html" class="drop-link">Testi</a>
+  <button class="drop-arrow" aria-hidden="true"></button>
+
+  <div class="dropdown-content">
+    <a href="Balzac.html">Gli impiegati - Balzac</a>
+    <a href="Melville.html">Bartleby lo scrivano - Melville</a>
+    <a href="Cechov.html">La morte dell'impiegato - Cechov</a>
+    <a href="DeMarchi.html">Regi impiegati - De Marchi</a>
+    <a href="Dubliners.html">Rivalsa in Gente di Dublino - Joyce</a>
+    <a href="GinoBianchi.html">Gino Bianchi - Jahier</a>
+    <a href="Processo.html">Il processo - Kafka</a>
+    <a href="Castello.html">Il castello - Kafka</a>
+    <a href="1984.html">1984 - Orwell</a>
+  </div>
+</div>
+
+  <div class="dropdown">
+  <a href="temi.html" class="drop-link">Temi</a>
+  <button class="drop-arrow" aria-hidden="true"></button>
+
+  <div class="dropdown-content">
+     <a href="Impiegato.html">L'impiegato</a>
+    <a href="Ufficio.html">L'ufficio</a>
+    <a href="Orari.html">Gli orari</a>
+    <a href="Relazioni.html">Le relazioni</a>
+    <a href="Utente.html">L'utente</a>
+    <a href="Denaro.html">Il denaro</a>
+    <a href="Promozioni.html">Le promozioni
+    <a href="DoppiaVita.html">La doppia vita</a>
+    <a href="Fine.html">La fine</a>
+  </div>
+</div>
+
+
+   <div class="dropdown">
+  <a href="approfondimenti.html" class="drop-link">Approfondimenti</a>
+  <button class="drop-arrow" aria-hidden="true"></button>
+
+  <div class="dropdown-content">
+    <a href="Antilingua.html">L'antilingua - Calvino</a>
+    <a href="Kracauer.html">Gli impiegati - Kracauer</a>
+    <a href="Living.html">Film: Living (2022)</a>
+    <a href="Fantozzi.html">Film: Fantozzi (1975)</a>
+    <a href="Album.html">Storia di un impiegato - De Andrè</a>
+  </div>
+</div>
+<div class="dropdown">
+  <a href="dati.html" class="drop-link">Dati</a>
+</div>
+
+</nav>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="index.html" class="btn-back"><i class="fa fa-home"></i></a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="testi.html">Testi</a> / Il castello - Kafka</li>
+  </ol>
+</nav>
+
+<button class="btn-back" onclick="history.back()">
+    <i class="fa fa-arrow-left"></i> Indietro
+</button>
+
+
+<main class="item-page">
+<div class="item-layout">
+
+
+    <div class="item-left">
+      <div class="cover large">
+        <img src="img/Castello.jpg" alt="Copertina Il Castello di Kafka">
+      </div>
+
+      <div class="themes-map">
+    <!-- Bubble L’impiegato -->
+    <span class="theme-bubble" data-theme="impiegato">L’impiegato</span>
+    <div id="modal-impiegato" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>L’impiegato</h3>
+            <p>I funzionari sembrano uguai tra loro nell'aspetto ma diversi se si trovano dentro o fuori dal Castello.</p>
+            <a href="Impiegato.html" class="theme-link">
+      Vai al tema
+    </a>
+        </div>
+    </div>
+
+    
+    <span class="theme-bubble" data-theme="ufficio">L'ufficio</span>
+    <div id="modal-ufficio" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>L’ufficio</h3>
+            <p>Raggiungere gli uffici del castello è impossibile a causa della struttura <strong>labirintica</strong> della burocrazia <em>«in fondo il Castello non era che una misera cittadina, una accozzaglia di casupole senza nessuna caratteristica»</em></p>
+            <a href="Ufficio.html" class="theme-link">
+      Vai al tema
+    </a>
+        </div>
+    </div>
+
+
+    <span class="theme-bubble" data-theme="utente">L'utente</span>
+    <div id="modal-utente" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>L’utente</h3>
+            <p><strong>L’appartenenza all’apparato burocratico</strong>: Ostessa spiega a K: <em>«Io non appartengo al Castello, son soltanto una donna»</em> (cap. 4). Olga aggiungerà: <em>«Apparteniamo tutti al Castello» ma «in certi casi non è vero affatto»</em> (Il segreto di Amalia, cap. 15). Gli abitanti del villaggio sono assoggettati al castello, ma non sono parte dell’apparato burocratico. Solo i signori fanno davvero parte del castello</p>
+            <p><strong>Consumarsi per la burocrazia</strong>: il padre di Amalia si consuma nell’attesa dei funzionari fuori dal Castello, vuole perorare una grazia per la sua famiglia, questo comporta un invecchiamento repentino (cap. 15).
+            Avvengono colloqui notturni tra cittadini del villaggio e funzionari (cap. 18): Le parti sempre considerate irraggiungibili finalmente s’incontrano sul letto di una camera d’albergo.
+            <strong>Punto di vista dei funzionari</strong>: l’utente <em>«nella notte ci estorce sacrifici di cui altrimenti
+mai saremmo capaci; bene, è così, finché la parte è lì presente, ci rafforza e costringe
+e sprona, e tutto si svolge quasi inconsciamente»</em></p>
+            <a href="Utente.html" class="theme-link">
+      Vai al tema
+    </a>
+        </div>
+    </div>
+
+
+    <span class="theme-bubble" data-theme="doppiavita">La doppia vita</span>
+    <div id="modal-doppiavita" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>La doppia vita</h3>
+            <p><strong>L’ufficio come prigione</strong>: la burocrazia è paragonata a un organismo che si appropria di ogni altra forma di vita (cap. 5) = impossibilità della doppia vita.</p> 
+<p><strong>L’Albergo dei Signori</strong>: i confini tra la vita amministrativa (diurna) e quella personale e del sriposo (notturna) non esistono più</p>
+            <a href="DoppiaVita.html" class="theme-link">
+      Vai al tema
+    </a>
+        </div>
+    </div>
+
+    <span class="theme-bubble" data-theme="fine">La fine</span>
+    <div id="modal-fine" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>La fine</h3>
+            <p>Il testo non è completo ma ci lascia con l'agrimensore ancora ancorato al circolo vizioso della burocrazia.</p>
+            <a href="Fine.html" class="theme-link">
+      Vai al tema
+    </a>
+        </div>
+       </div> <!--chiude themes-map-->
+    </div> <!--chiude item-left-->
+  </div>
+
+    <div class="item-right">
+      <h2>Il Castello</h2>
+      <p><strong>Autore:</strong> Franz Kafka
+          <a href="https://it.wikipedia.org/wiki/Franz_Kafka" target="_blank" class="wiki-link" title="Vai alla pagina Wikipedia dell'autore">
+        <i class="fa fa-info-circle"></i>
+          </a>
+      </p>
+      <p><strong>Anno:</strong> 1926</p>
+
+      <h3>Trama</h3> 
+      <p>Al termine di un viaggio «senza fine», l'agrimensore K. giunge nel villaggio ai piedi del castello del conte Westwest, dove è accolto con ostilità e sospetto. La convocazione di K. è probabilmente solo la conseguenza di un errore burocratico: nel villaggio, infatti, i confini, segnati da tempo immemorabile, sono immutabili e nessuno ha bisogno di un agrimensore. Esito estremo dell'arte dello scrittore praghese, il romanzo è la storia degli strenui quanto inutili tentativi del protagonista di avere accesso al castello per sciogliere il mistero della chiamata e legittimare di fronte alla comunità la propria condizione di straniero. Su una trama relativamente semplice, Kafka intesse una complessa rete di rimandi e costellazioni simboliche che hanno offerto spunto alla critica per innumerevoli interpretazioni. Ma l'eccezionale stratificazione di significati – biografici, religiosi, filosofici – non incrina il magico equilibrio di fiaba che fa del Castello (1922) un'amara allegoria della vita e della perenne vanità degli sforzi umani. </p>
+       <!-- BOTTONE PDF -->
+  <a href="https://www.rodoni.ch/KAFKA/castello.html"
+   class="pdf-btn"
+   target="_blank"
+   rel="noopener noreferrer">
+   <i class="fa fa-file-pdf-o"></i> Leggi il testo (PDF)
+</a>
+<p class="pdf-note">
+  Il testo è consultabile online tramite archivi digitali pubblici.
+</p>
+
+    </div> <!-- chiude item-right-->
+
+      
+ <aside class="secondary-nav">
+      <h3>Naviga tra i testi</h3>
+      <ul>
+        <li><a href="Balzac.html" >Gli impiegati - Balzac</a></li>
+        <li><a href="Melville.html">Bartelby lo scrivano - Melville</a></li>
+        <li><a href="Cechov.html">La morte dell’impiegato - Čechov</a></li>
+        <li><a href="DeMarchi.html">Regi impiegati - De Marchi</a></li>
+        <li><a href="Dubliners.html">Rivalsa in Gente di Dublino - Joyce</a></li>
+        <li><a href="GinoBianchi.html">Gino Bianchi - Jahier</a></li>
+        <li><a href="Processo.html">Il processo - Kafka</a></li>
+        <li><a href="Castello.html"class="active">Il castello - Kafka</a></li>
+        <li><a href="1984.html">1984 - Orwell</a></li>
+      </ul>
+ </aside>
+</div>
+</main>
+<div>
+         <button class="top-btn" onclick="scrollToTop()">Torna su</button>
+      </div>
+<footer class="site-footer">
+  <div>
+    <a href="credits.html">Credits</a> |
+    <a href="#">Licenze</a> |
+    <a href="wpp.html">Web Project Plan</a>
+  </div>
+
+  <div>
+    © Copyright (c) 2026 by Giorgia Amara
+  </div>
+
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
