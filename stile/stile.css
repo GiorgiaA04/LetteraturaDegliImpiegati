@@ -31,7 +31,7 @@ body {
 
 .header-link:hover,
 .header-link:active {
-  color: var(--white);
+  color: var(--black);
 }
 
 /* NAVBAR */
@@ -943,6 +943,7 @@ th.sortable .hint {
   }
 
 }
+
 
 
 
