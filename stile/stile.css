@@ -924,7 +924,7 @@ th.sortable .hint {
 
   /* Layout item e citazioni */
   .item-layout,
-  .citation-layout {
+  .citation-layout, .approfondimenti-layout {
     flex-direction: column;
   }
 
@@ -947,6 +947,7 @@ th.sortable .hint {
   }
 
 }
+
 
 
 
