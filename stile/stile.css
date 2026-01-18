@@ -57,10 +57,7 @@ body {
 }
 
 .drop-link:hover,
-.drop-link:active {
-  color: black;
-}
-
+.drop-link:active, 
 .drop-link:visited{
   color: white
 }
@@ -946,6 +943,7 @@ th.sortable .hint {
   }
 
 }
+
 
 
 
