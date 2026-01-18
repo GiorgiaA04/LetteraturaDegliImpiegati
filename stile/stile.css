@@ -924,9 +924,16 @@ th.sortable .hint {
 
   /* Layout item e citazioni */
   .item-layout,
-  .citation-layout, .approfondimenti-layout {
+  .citation-layout, {
     flex-direction: column;
   }
+  
+  .approfondimento-content {
+    flex-direction: column; 
+    gap: 1rem;              
+  }
+
+
 
   /* Sidebar */
   .secondary-nav {
@@ -947,6 +954,7 @@ th.sortable .hint {
   }
 
 }
+
 
 
 
