@@ -2,76 +2,8 @@
 {
     "terms": [
         {
-            "term": "Romanticismo",
-            "definition": "Movimento culturale e letterario che valorizza i sentimenti, l'individualità, la storia e l'identità dei popoli."
-        },
-        {
-            "term": "Illuminismo",
-            "definition": "Movimento culturale del Settecento che pone al centro la ragione e la fiducia nel progresso attraverso la conoscenza."
-        },
-        {
-            "term": "Patriottismo",
-            "definition": "Sentimento di appartenenza e di legame con la propria patria, accompagnato dal desiderio di contribuire al suo bene."
-        },
-        {
-            "term": "Neoclassicismo",
-            "definition": "Corrente culturale che si ispira all'arte e ai valori dell'antichità greca e romana, ricercando equilibrio, armonia e bellezza."
-        },
-        {
-            "term": "Preromanticismo",
-            "definition": "Tendenza culturale che anticipa alcuni temi romantici, come il sentimento, la malinconia, la natura e l'interiorità."
-        },
-        {
-            "term": "Restaurazione",
-            "definition": "Periodo storico successivo alla caduta di Napoleone, caratterizzato dal tentativo di ripristinare le monarchie precedenti alla Rivoluzione francese."
-        },
-        {
-            "term": "Sublime",
-            "definition": "Esperienza estetica suscitata da qualcosa di grandioso o smisurato, che provoca meraviglia e insieme un senso di inquietudine."
-        },
-        {
-            "term": "Esilio",
-            "definition": "Condizione di chi è costretto o sceglie di vivere lontano dalla propria patria."
-        },
-        {
-            "term": "Romanzo epistolare",
-            "definition": "Tipo di romanzo costruito attraverso lettere scritte dai personaggi, che raccontano gli eventi e i loro sentimenti."
-        },
-        {
-            "term": "Pessimismo storico",
-            "definition": "Visione di Leopardi secondo cui l'infelicità umana è legata soprattutto alla perdita delle illusioni causata dalla civiltà e dalla ragione."
-        },
-        {
-            "term": "Pessimismo cosmico",
-            "definition": "Concezione secondo cui l'infelicità è una condizione universale, propria di tutti gli esseri viventi e legata alla natura stessa."
-        },
-        {
-            "term": "Vago e indefinito",
-            "definition": "Principio della poetica leopardiana secondo cui immagini e sensazioni non precise stimolano l'immaginazione e il piacere."
-        },
-        {
-            "term": "Idillio",
-            "definition": "Componimento poetico che rappresenta scene della natura o momenti di riflessione e interiorità."
-        },
-        {
-            "term": "Provvidenza",
-            "definition": "Nel pensiero cristiano, intervento di Dio nella storia e nella vita degli uomini, tema centrale nei Promessi sposi."
-        },
-        {
-            "term": "Romanzo storico",
-            "definition": "Genere narrativo che ambienta una storia inventata in un periodo storico reale, intrecciando personaggi e vicende immaginarie con eventi del passato."
-        },
-        {
-            "term": "Conversione",
-            "definition": "Cambiamento profondo delle convinzioni religiose e del modo di vivere, come quello vissuto da Manzoni."
-        },
-        {
-            "term": "Titanismo",
-            "definition": "Atteggiamento di ribellione e sfida dell'individuo contro forze superiori, come il destino, la società o la natura."
-        },
-        {
-            "term": "Risorgimento",
-            "definition": "Processo storico e politico che portò all'unificazione dell'Italia nel 1861."
+            "term": "Alienazione",
+            "definition": "condizione di estraniazione, di distacco o di trasferimento di qualcosa che è proprio verso l'esterno o verso un altro soggetto."
         }
     ]
 }
