@@ -1271,19 +1271,21 @@ paragraphs.forEach(function (paragraph) {
 
 });
 
- if (terms.length === 0) {
-        return;
-    }
-// esamina ogni nodo di testo
-let definitionCounter = 0;
-
+// prepara i termini del glossario
 const terms = glossaryData
-        .map(function (item) {
-            return item.term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-        })
-        .sort(function (a, b) {
-            return b.length - a.length;
-        });
+    .map(function (item) {
+        return item.term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    })
+    .sort(function (a, b) {
+        return b.length - a.length;
+    });
+
+if (terms.length === 0) {
+    return;
+}
+
+// esamina ogni nodo di testo
+let definitionCounter = 0; 
 
 textNodes.forEach(function (node) {
 
