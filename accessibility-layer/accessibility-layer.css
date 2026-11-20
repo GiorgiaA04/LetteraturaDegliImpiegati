@@ -1,0 +1,805 @@
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    src: url("./fonts/AtkinsonHyperlegible-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+#accessibility-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 58px;
+    height: 58px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #4E5A34;
+    color: white;
+
+    font-size: 27px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+}
+
+#accessibility-button:hover {
+    background-color: #374126;
+}
+
+#accessibility-button:focus-visible {
+    outline: 3px solid #B58A45;
+    outline-offset: 4px;
+}
+
+#accessibility-panel[aria-hidden="true"] {
+    display: none;
+}
+
+#accessibility-panel[aria-hidden="false"] {
+    display: block;
+}
+#accessibility-panel {
+    position: fixed;
+    right: 25px;
+    top: 20px;
+    bottom: 95px;
+
+    width: 320px;
+    max-width: calc(100vw - 40px);
+    overflow-y: auto;
+
+    padding: 24px;
+    box-sizing: border-box;
+
+    background-color: #F8F5ED;
+    color: #34342E;
+
+    border: 1px solid #D8D0C0;
+    border-radius: 14px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+
+    z-index: 9998;
+}
+
+/* PULSANTE DI CHIUSURA DEL PANNELLO */
+
+#close-accessibility-panel {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: transparent;
+    color: #34342E;
+
+    font-family: Arial, sans-serif;
+    font-size: 27px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+#close-accessibility-panel:hover {
+    background-color: #E8EBDD;
+}
+
+#close-accessibility-panel:focus-visible {
+    outline: 3px solid #B58A45;
+    outline-offset: 2px;
+}
+
+/* INDICE DEI CONTENUTI */
+
+#accessibility-index {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #D8D0C0;
+}
+
+#accessibility-index summary {
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 0;
+    list-style-position: inside;
+}
+
+#accessibility-index summary:hover {
+    text-decoration: underline;
+}
+
+#accessibility-index summary:focus-visible {
+    outline: 2px solid #B58A45;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+#accessibility-index details[open] summary {
+    margin-bottom: 12px;
+}
+
+#accessibility-index ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#accessibility-index li {
+    margin-bottom: 9px;
+    font-size: 15px;
+}
+
+#accessibility-index a {
+    color: #4E5A34;
+    text-decoration: none;
+}
+
+#accessibility-index a:hover {
+    text-decoration: underline;
+}
+
+#accessibility-index a:focus-visible {
+    outline: 2px solid #B58A45;
+    outline-offset: 3px;
+}
+
+/* Distinzione visiva tra i livelli dei titoli */
+
+#accessibility-index .accessibility-h2 {
+    padding-left: 12px;
+}
+
+#accessibility-index .accessibility-h3 {
+    padding-left: 24px;
+}
+
+
+/* PERSONALIZZAZIONE DEL TESTO */
+
+#text-settings {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #D8D0C0;
+}
+
+#text-settings h3,
+#contrast-settings h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #34342E;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* SELEZIONE DEL CARATTERE TIPOGRAFICO E CONTRASTO */
+
+#text-settings label[for="font-selector"],
+#contrast-settings label[for="contrast-selector"] {
+    display: block;
+    margin-bottom: 8px;
+    color: #34342E;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* selettore font e contrasto*/
+#font-selector,
+#contrast-selector {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+
+    border: 1px solid #4E5A34;
+    border-radius: 8px;
+
+    background-color: #FFFFFF;
+    color: #34342E;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+#font-selector:hover,
+#contrast-selector:hover {
+    background-color: #F0F2E9;
+}
+
+#font-selector:focus-visible,
+#contrast-selector:focus-visible {
+    outline: 3px solid #B58A45;
+    outline-offset: 3px;
+}
+
+
+/* CONTROLLI PROGRESSIVI DELLA DIMENSIONE DEL TESTO */
+
+#text-controls,
+#line-spacing-controls {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+/* PULSANTI + E - */
+
+#text-controls button,
+#line-spacing-controls button {
+    width: 44px;
+    min-height: 44px;
+    padding: 0;
+
+    border: 1px solid #4E5A34;
+    border-radius: 8px;
+
+    background-color: #4E5A34;
+    color: #FFFFFF;
+
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#text-controls button:hover:not(:disabled),
+#line-spacing-controls button:hover:not(:disabled) {
+    background-color: #374126;
+}
+
+
+/* Etichette dei livelli */
+
+#text-size-label,
+#line-spacing-label {
+    display: block;
+    min-width: 0;
+    text-align: center;
+
+    color: #34342E;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Pulsanti disabilitati ai livelli minimo e massimo */
+
+#text-controls button:disabled,
+#line-spacing-controls button:disabled {
+    background-color: #E8EBDD;
+    border-color: #A6AD95;
+    color: #596044;
+    cursor: not-allowed;
+}
+
+/* Focus da tastiera */
+
+#text-controls button:focus-visible,
+#line-spacing-controls button:focus-visible {
+    outline: 3px solid #B58A45;
+    outline-offset: 3px;
+}
+
+/* Pressione */
+
+#text-controls button:active:not(:disabled),
+#line-spacing-controls button:active:not(:disabled) {
+    background-color: #29321D;
+}
+
+
+/* PULSANTE RIPRISTINO IMPOSTAZIONI */
+
+#reset-settings-button {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+
+    margin-top: 16px;
+    padding: 10px 12px;
+
+    border: 1px solid #B58A45;
+    border-radius: 8px;
+
+    background-color: transparent;
+    color: #34342E;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+#reset-settings-button:hover {
+    background-color: #F0E9D9;
+}
+
+#reset-settings-button:focus-visible {
+    outline: 3px solid #B58A45;
+    outline-offset: 3px;
+}
+
+
+/* parole del glossario evidenziate */
+.glossary-term {
+    background-color: #f5e6a8;
+    color: #3d3025;
+    border-bottom: 2px dotted #8b5e3c;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 0 2px;
+}
+
+.glossary-term:focus {
+    outline: 2px solid #8b5e3c;
+    outline-offset: 2px;
+}
+
+.glossary-term:hover {
+    background-color: #ead28a;
+}
+
+
+/* Contenitore del termine e della definizione */
+.glossary-popover-container {
+    position: relative;
+    display: inline;
+}
+
+
+/* Scheda della definizione */
+
+.glossary-definition {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 0;
+    right: auto;
+
+    width: min(250px, 80vw);
+    max-height: 180px;
+    overflow-y: auto;
+
+    padding: 14px;
+
+    background-color: #FFFDF7;
+    color: #34342E;
+
+    border: 1px solid #D8D0C0;
+    border-left: 4px solid #4E5A34;
+    border-radius: 8px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+
+    font-size: 1em;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    z-index: 1000;
+}
+
+
+
+/* PULSANTI DEL GLOSSARIO NEL PANNELLO */
+
+#glossary-section > button {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    margin-top: 10px;
+
+    border: 1px solid #4E5A34;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Visualizza glossario: pulsante principale */
+
+#glossary-section > button:first-of-type {
+    background-color: #4E5A34;
+    color: #FFFFFF;
+}
+
+#glossary-section > button:first-of-type:hover {
+    background-color: #374126;
+}
+
+/* Attiva glossario: pulsante secondario */
+
+#glossary-section > button:last-of-type {
+    background-color: transparent;
+    color: #4E5A34;
+}
+
+#glossary-section > button:last-of-type:hover {
+    background-color: #E8EBDD;
+}
+
+/* Stato attivo del glossario */
+
+#glossary-section > button[aria-pressed="true"] {
+    background-color: #E8EBDD;
+    border: 2px solid #4E5A34;
+    color: #374126;
+}
+
+/* Focus da tastiera */
+
+#glossary-section > button:focus-visible {
+    outline: 3px solid #B58A45;
+    outline-offset: 3px;
+}
+
+/* PULSANTE DELLA SPAZIATURA DEL TESTO */
+#text-spacing-button {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #4E5A34;
+    border-radius: 8px;
+    background-color: #4E5A34;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#text-spacing-button:hover {
+    background-color: #374126;
+}
+
+#text-spacing-button:focus-visible {
+    outline: 3px solid #B58A45;
+    outline-offset: 3px;
+}
+
+#text-spacing-button:active {
+    background-color: #29321D;
+}
+
+
+
+/* CONTENITORE DEI RIASSUNTI */
+.summary-accordion {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+/* PULSANTE MOSTRA/NASCONDI RIASSUNTO */
+.summary-accordion .summary-toggle {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 48px;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    border: 1px solid #4E5A34;
+    border-radius: 8px;
+    background-color: #4E5A34;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: break-word;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.summary-accordion .summary-toggle:hover {
+    background-color: #374126;
+}
+
+.summary-accordion .summary-toggle:focus-visible {
+    outline: 3px solid #B58A45;
+    outline-offset: 3px;
+}
+
+.summary-accordion .summary-toggle[aria-expanded="true"] {
+    background-color: #374126;
+}
+
+/* PULSANTE ATTIVA/DISATTIVA RIASSUNTI NEL PANNELLO */
+#summaries-section > button {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #4E5A34;
+    border-radius: 8px;
+    background-color: #4E5A34;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+#summaries-section > button:hover {
+    background-color: #374126;
+}
+
+#summaries-section > button:focus-visible {
+    outline: 3px solid #B58A45;
+    outline-offset: 3px;
+}
+
+#summaries-section > button[aria-pressed="true"] {
+    background-color: #374126;
+}
+/* PERSONALIZZAZIONE DEL CARATTERE TIPOGRAFICO */
+
+/* Serif */
+.accessibility-content.font-serif,
+.accessibility-content.font-serif p,
+.accessibility-content.font-serif h1,
+.accessibility-content.font-serif h2,
+.accessibility-content.font-serif h3,
+.accessibility-content.font-serif h4,
+.accessibility-content.font-serif li,
+.accessibility-content.font-serif td,
+.accessibility-content.font-serif th,
+.accessibility-content.font-serif blockquote,
+.accessibility-content.font-serif figcaption,
+.accessibility-content.font-serif dt,
+.accessibility-content.font-serif dd,
+.accessibility-content.font-serif .glossary-term,
+.accessibility-content.font-serif .glossary-definition {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Sans serif */
+.accessibility-content.font-sans-serif,
+.accessibility-content.font-sans-serif p,
+.accessibility-content.font-sans-serif h1,
+.accessibility-content.font-sans-serif h2,
+.accessibility-content.font-sans-serif h3,
+.accessibility-content.font-sans-serif h4,
+.accessibility-content.font-sans-serif li,
+.accessibility-content.font-sans-serif td,
+.accessibility-content.font-sans-serif th,
+.accessibility-content.font-sans-serif blockquote,
+.accessibility-content.font-sans-serif figcaption,
+.accessibility-content.font-sans-serif dt,
+.accessibility-content.font-sans-serif dd,
+.accessibility-content.font-sans-serif .glossary-term,
+.accessibility-content.font-sans-serif .glossary-definition {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.accessibility-content.font-atkinson,
+.accessibility-content.font-atkinson p,
+.accessibility-content.font-atkinson h1,
+.accessibility-content.font-atkinson h2,
+.accessibility-content.font-atkinson h3,
+.accessibility-content.font-atkinson h4,
+.accessibility-content.font-atkinson li,
+.accessibility-content.font-atkinson td,
+.accessibility-content.font-atkinson th,
+.accessibility-content.font-atkinson blockquote,
+.accessibility-content.font-atkinson figcaption,
+.accessibility-content.font-atkinson dt,
+.accessibility-content.font-atkinson dd,
+.accessibility-content.font-atkinson .glossary-term,
+.accessibility-content.font-atkinson .glossary-definition {
+    font-family: "Atkinson Hyperlegible", Arial, sans-serif;
+}
+
+/* MODALITÀ DI CONTRASTO */
+
+/* CONTRASTO ELEVATO */
+
+body.accessibility-contrast-high .accessibility-content {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+}
+
+body.accessibility-contrast-high .accessibility-content * {
+    color: #000000 !important;
+}
+
+/* Collegamenti */
+body.accessibility-contrast-high .accessibility-content a {
+    color: #0000CC !important;
+    text-decoration: underline !important;
+}
+
+/* Pulsanti e controlli */
+body.accessibility-contrast-high .accessibility-content button,
+body.accessibility-contrast-high .accessibility-content input,
+body.accessibility-contrast-high .accessibility-content select,
+body.accessibility-contrast-high .accessibility-content textarea,
+body.accessibility-contrast-high .accessibility-content [role="button"],
+body.accessibility-contrast-high .accessibility-content [role="link"] {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+}
+
+/* Tabelle */
+body.accessibility-contrast-high .accessibility-content table,
+body.accessibility-contrast-high .accessibility-content th,
+body.accessibility-contrast-high .accessibility-content td {
+    border-color: #000000 !important;
+}
+
+/* Focus da tastiera */
+body.accessibility-contrast-high .accessibility-content :focus-visible {
+    outline: 3px solid #000000 !important;
+    outline-offset: 3px !important;
+}
+
+
+/* CONTRASTO INVERTITO */
+
+body.accessibility-contrast-inverted .accessibility-content {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+body.accessibility-contrast-inverted .accessibility-content * {
+    color: #FFFFFF !important;
+}
+
+/* Definizioni del glossario */
+body.accessibility-contrast-inverted
+.accessibility-content .glossary-definition {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FFFFFF !important;
+}
+
+/* Testo contenuto nelle definizioni */
+body.accessibility-contrast-inverted
+.accessibility-content .glossary-definition * {
+    color: #FFFFFF !important;
+}
+
+/* Collegamenti */
+body.accessibility-contrast-inverted .accessibility-content a {
+    color: #FFFF00 !important;
+    text-decoration: underline !important;
+}
+
+/* Pulsanti e controlli */
+body.accessibility-contrast-inverted .accessibility-content button,
+body.accessibility-contrast-inverted .accessibility-content input,
+body.accessibility-contrast-inverted .accessibility-content select,
+body.accessibility-contrast-inverted .accessibility-content textarea,
+body.accessibility-contrast-inverted .accessibility-content [role="button"],
+body.accessibility-contrast-inverted .accessibility-content [role="link"] {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FFFFFF !important;
+}
+
+/* Tabelle */
+body.accessibility-contrast-inverted .accessibility-content table,
+body.accessibility-contrast-inverted .accessibility-content th,
+body.accessibility-contrast-inverted .accessibility-content td {
+    border-color: #FFFFFF !important;
+}
+
+/* Focus da tastiera */
+body.accessibility-contrast-inverted .accessibility-content :focus-visible {
+    outline: 3px solid #FFFF00 !important;
+    outline-offset: 3px !important;
+}
+
+/* CONTRASTO ELEVATO - PANNELLO ACCESSIBILITY LAYER */
+
+body.accessibility-contrast-high #accessibility-panel {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+}
+
+body.accessibility-contrast-high #accessibility-panel * {
+    color: #000000 !important;
+}
+
+body.accessibility-contrast-high #accessibility-panel button,
+body.accessibility-contrast-high #accessibility-panel select {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+}
+
+body.accessibility-contrast-high #accessibility-panel :focus-visible {
+    outline: 3px solid #000000 !important;
+    outline-offset: 3px !important;
+}
+
+/* CONTRASTO INVERTITO - PANNELLO ACCESSIBILITY LAYER */
+
+body.accessibility-contrast-inverted #accessibility-panel {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FFFFFF !important;
+}
+
+body.accessibility-contrast-inverted #accessibility-panel * {
+    color: #FFFFFF !important;
+}
+
+body.accessibility-contrast-inverted #accessibility-panel button,
+body.accessibility-contrast-inverted #accessibility-panel select {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FFFFFF !important;
+}
+
+body.accessibility-contrast-inverted #accessibility-panel :focus-visible {
+    outline: 3px solid #FFFF00 !important;
+    outline-offset: 3px !important;
+}
+
+/* HOVER E ACTIVE - CONTRASTO ELEVATO */
+
+body.accessibility-contrast-high #accessibility-panel button:hover:not(:disabled),
+body.accessibility-contrast-high #accessibility-panel select:hover {
+    background-color: #E0E0E0 !important;
+}
+
+body.accessibility-contrast-high #accessibility-panel button:active:not(:disabled) {
+    background-color: #BDBDBD !important;
+}
+
+body.accessibility-contrast-high #accessibility-panel button:disabled {
+    background-color: #D6D6D6 !important;
+    color: #555555 !important;
+    border-color: #555555 !important;
+    cursor: not-allowed;
+}
+
+/* HOVER E ACTIVE - CONTRASTO INVERTITO */
+
+body.accessibility-contrast-inverted #accessibility-panel button:hover:not(:disabled),
+body.accessibility-contrast-inverted #accessibility-panel select:hover {
+    background-color: #333333 !important;
+}
+
+body.accessibility-contrast-inverted #accessibility-panel button:active:not(:disabled) {
+    background-color: #555555 !important;
+}
+
+body.accessibility-contrast-inverted #accessibility-panel button:disabled {
+    background-color: #222222 !important;
+    color: #AAAAAA !important;
+    border-color: #AAAAAA !important;
+    cursor: not-allowed;
+}
